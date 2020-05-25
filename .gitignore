@@ -1,0 +1,27 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.suo
+*.sqlite
+.vs
+RealEstatePropertyApi/bin/Debug/netstandard2.0
+RealEstatePropertyApi/obj
+RealEstatePropertyApi/bin/Debug
+RealEstatePropertyApi/bin/Release
+RealEstatePropertyApi/appsettings.Development.json
+RealEstatePropertyApi/appsettings.json
+RealEstatePropertyApi/appsettings.Production.json
+RealEstatePropertyApi/Properties/PublishProfiles
+RealEstatePropertyApi/Properties/launchSettings.json
+RealEstatePropertyApi/CoreApiProject.csproj.user
+
+RealEstatePropertyApi.Core/bin/Debug/netstandard2.0
+RealEstatePropertyApi.Core/obj
+RealEstatePropertyApi.Core/bin/Debug
+RealEstatePropertyApi.Core/bin/Release
+
+CoreApiProject.Infrastructure/bin/Debug/netstandard2.0
+CoreApiProject.Infrastructure/obj
+CoreApiProject.Infrastructure/bin/Debug
+CoreApiProject.Infrastructure/bin/Release
