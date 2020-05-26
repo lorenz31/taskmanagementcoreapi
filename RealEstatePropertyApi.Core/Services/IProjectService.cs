@@ -7,7 +7,7 @@ namespace CoreApiProject.Core.Services
 {
     public interface IProjectService
     {
-        Task<IResponseModel> AddNewProjectAsync(ProjectModel obj, string baseurl);
+        Task<IResponseModel> AddNewProjectAsync(ProjectModel obj);
         Task<List<ProjectModel>> GetProjectsAsync(Guid userid);
         Task<List<ProjectModel>> GetActiveProjectsAsync(Guid userid);
         Task<bool> UpdateProjectStatusAsync(Guid userid, Guid projectid);

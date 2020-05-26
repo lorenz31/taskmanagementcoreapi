@@ -32,7 +32,7 @@ namespace CoreApiProject.Services.Service
             _loggerService = loggerService;
         }
 
-        public async Task<IResponseModel> AddNewProjectAsync(ProjectModel obj, string baseurl)
+        public async Task<IResponseModel> AddNewProjectAsync(ProjectModel obj)
         {
             try
             {

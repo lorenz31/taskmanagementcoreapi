@@ -35,7 +35,7 @@ namespace CoreApiProject.Controllers
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var isProjectAdded = await _projectService.AddNewProjectAsync(obj, BaseUrl());
+            var isProjectAdded = await _projectService.AddNewProjectAsync(obj);
 
             _response.Status = isProjectAdded.Status;
             _response.Message = isProjectAdded.Message;
