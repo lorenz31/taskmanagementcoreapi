@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CoreApiProject.Services.Service
+namespace CoreApiProject.Infrastructure.Service
 {
     public class ProjectService : IProjectService
     {

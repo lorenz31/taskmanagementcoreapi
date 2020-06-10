@@ -1,4 +1,4 @@
-﻿namespace CoreApiProject.Core
+﻿namespace CoreApiProject.Core.Services
 {
     public interface ILoggerService
     {

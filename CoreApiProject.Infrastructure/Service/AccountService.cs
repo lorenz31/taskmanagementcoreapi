@@ -11,7 +11,7 @@ using System.Linq;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 
-namespace CoreApiProject.Services.Service
+namespace CoreApiProject.Infrastructure.Service
 {
     public class AccountService : IAccountService
     {

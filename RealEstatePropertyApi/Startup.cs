@@ -1,13 +1,5 @@
-﻿using CoreApiProject.Core.BusinessModels;
-using CoreApiProject.Core.Services;
-using CoreApiProject.Core.Jwt;
-using CoreApiProject.Core;
+﻿using CoreApiProject.Core.Jwt;
 using CoreApiProject.DAL.DataContext;
-using CoreApiProject.Services.Service;
-using CoreApiProject.Infrastructure.Repository;
-using CoreApiProject.Infrastructure.Service;
-using CoreApiProject.Infrastructure.Services;
-using CoreApiProject.Filters;
 
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -18,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using CoreApiProject.Registration;
 
 namespace CoreApiProject
 {
@@ -81,25 +74,9 @@ namespace CoreApiProject
                         options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
                     );
 
-            services.AddScoped<ValidateUserIdFilter>();
-            services.AddScoped<ValidateUserProjIdFilter>();
-            services.AddScoped<ValidateProjIdFilter>();
-            services.AddScoped<ValidateProjTaskIdFilter>();
-            services.AddScoped<ValidateTaskIdFilter>();
-
-            //services.AddTransient<IClientModel, ClientModel>();
-            services.AddTransient<IResponseModel, ResponseModel>();
-            //services.AddTransient<IProjectModel, ProjectModel>();
-            services.AddTransient<IUserModel, UserModel>();
-            //services.AddTransient<ITasksModel, TasksModel>();
-
-            services.AddTransient<IRepository, Repository>();
-            services.AddTransient<ILoggerService, LoggerService>();
-            services.AddTransient<IAccountService, AccountService>();
-            services.AddTransient<IProjectService, ProjectService>();
-            services.AddTransient<IMemberService, MemberService>();
-            services.AddTransient<ITasksService, TasksService>();
-            services.AddTransient<ICommentService, CommentService>();
+            services.RegisterFilters();
+            services.RegisterBusinessModels();
+            services.RegisterServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

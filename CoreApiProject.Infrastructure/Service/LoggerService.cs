@@ -1,9 +1,9 @@
-﻿using CoreApiProject.Core;
+﻿using CoreApiProject.Core.Services;
 
 using System.IO;
 using System;
 
-namespace CoreApiProject.Infrastructure.Services
+namespace CoreApiProject.Infrastructure.Service
 {
     public class LoggerService : ILoggerService
     {
